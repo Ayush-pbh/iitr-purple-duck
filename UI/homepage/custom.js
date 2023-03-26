@@ -225,4 +225,7 @@ function completetran(){
 }
 document.getElementById('btn-trg-connectwallet').addEventListener('click', connectWallet);
 document.getElementById('btn-trg-openform').addEventListener('click', showform);
-document.getElementById('complete_transaction').addEventListener('click', completetran);
+document.getElementById('something').addEventListener('click', completetran());
+// document.getElementById('complete_transaction').addEventListener('click', completetran);
+
+// complete_transaction
