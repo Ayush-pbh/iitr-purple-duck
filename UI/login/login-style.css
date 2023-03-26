@@ -1,0 +1,187 @@
+/* Reset all margins and paddings */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset all font styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  font-family: inherit;
+  line-height: 1;
+  color: inherit;
+}
+
+/* Reset all list styles */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Reset all link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset all form element styles */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  color: inherit;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Oxygen';
+    
+    
+}
+
+#particles-js{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+  }
+
+  .content-form {
+    
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 50%;
+  background-color: rgba(235, 235, 235, 0.537);
+    color: rgb(32, 32, 32);
+    backdrop-filter: blur(5px);
+    width: 80%;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .login-btn {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(254, 63, 63, 0.848);
+    color: rgb(251, 251, 251);
+  }
+  .login-btn:hover {
+    background-color: rgb(36, 36, 36);
+  }
+
+  .other-wallet {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 154, 31, 0.848);
+    color: rgb(251, 251, 251);
+  }
+  .other-wallet:hover {
+    background-color: rgb(36, 36, 36);
+  }
+
+  .creds {
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(185, 185, 185, 0.329);
+    color: rgb(46, 46, 46);
+    margin: 10px;
+    font-weight: 500;
+
+  }
+
+  .creds:focus {
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+  }
+
+  h1{
+    font-family: 'Jost';
+    font-size: 2rem;
+    margin: 10px;
+    font-weight: 800;
+    color: rgb(37, 37, 37);
+  }
+
+  h2 {
+    color: rgb(75, 75, 75);
+    margin-bottom: 10px;
+  }
+
+  .fa-droplet {
+    font-size: 3rem;
+    color:  rgba(254, 63, 63, 0.848);
+    animation: gradient 5s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      color:  rgba(254, 63, 63, 0.848);;
+    }
+    50% {
+      color:  rgba(255, 8, 8, 0.848);;
+    }
+    100% {
+        color:  rgba(254, 63, 63, 0.848);;
+      }
+      50% {
+  }
+
+  .sign-up {
+    color:  rgba(254, 63, 63, 0.848);
+  }
+
+  p {
+    margin-bottom: 10px;
+
+  }
+
+  hr {
+    
+  }
+
+  .fa-wallet {
+    color: rgb(251, 251, 251);
+  }

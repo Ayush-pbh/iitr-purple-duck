@@ -1,0 +1,156 @@
+/* Reset all margins and paddings */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset all font styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  font-family: inherit;
+  line-height: 1;
+  color: inherit;
+}
+
+/* Reset all list styles */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Reset all link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset all form element styles */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  color: inherit;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+}
+
+body {
+  background-color: rgb(234, 234, 234);
+}
+
+.sidenav {
+  background-color: rgba(14, 14, 14, 0.114) !important;
+  backdrop-filter: blur(5px) !important;
+  color: azure;
+}
+
+nav {
+  background-color: rgb(42, 42, 42) !important;
+  backdrop-filter: blur(5px) !important;
+  
+}
+
+.card-panel {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 62, 62) !important;
+  border-radius: 10px !important;
+  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(5px) !important;
+  color: aliceblue !important;
+}
+
+.txt {
+  color: aliceblue !important;
+}
+
+#sad-adj {
+  font-size: 5rem;
+}
+
+.trans-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(47, 47, 47) !important;
+  padding: 10px !important;
+}
+
+.fa-droplet {
+  background-color: aliceblue;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-arrow-right {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.transaction-block {
+  /* background-color:; */
+  color: rgb(201, 255, 255);
+  padding: 1px;
+  margin: 5px;
+  border-radius: 2px;
+  align-items: center;
+}
+
+.t-block {
+  background-color: #e9e9e96f;
+  border-radius: 2px;
+  padding: 5px;
+  margin: 5px;
+  color: rgb(0, 0, 0);
+}
+
+/*table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+}
+td,
+th {
+  padding: 0;
+  margin: 0;
+  border: none;
+}*/
+
+.success {
+  background-color: red;
+}
+
+.collapsible-header {
+    background-color: #747474 !important;
+}
+
+
+.custom-top-username-diplay{
+  width:100%;
+  height:20px;
+  background-color: #111;
+  color:#ccc;
+  text-align: center;
+}

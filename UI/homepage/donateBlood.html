@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+
+</head>
+<body>
+    <!-- I will use qrcode  -->
+    <input type="button" value="Connect" id="connect-wallet">
+    it will hit the setValue End-Point!
+    <hr>
+    <input type="text" name="reciver_add" id="reciver_add" placeholder="reciver address here...">
+    <hr>
+    <input type="text" name="storageHash" id="storageHash" placeholder="Storage Hash Here">
+    <input type="text" name="transactionType" id="transactionType" placeholder="Transaction Type Here!">
+    <hr>
+    <input type="button" value="Run Transaction" id="tran-trigger">
+<hr><hr>
+    <input type="button" value="View All Transactions" id="view-all-tran-trigger">
+
+    <script>
+        //1- connect metamask
+        let account;
+        
+        BloodOathABI = [
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "name",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "string"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [],
+                            "name": "entry_count",
+                            "outputs": [
+                                {
+                                    "name": "",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": true,
+                            "inputs": [
+                                {
+                                    "name": "",
+                                    "type": "uint256"
+                                }
+                            ],
+                            "name": "entries",
+                            "outputs": [
+                                {
+                                    "name": "entry_index",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "name": "storage_hash",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "transaction_type",
+                                    "type": "string"
+                                }
+                            ],
+                            "payable": false,
+                            "stateMutability": "view",
+                            "type": "function"
+                        },
+                        {
+                            "constant": false,
+                            "inputs": [
+                                {
+                                    "name": "_filehash",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "_transactiontype",
+                                    "type": "string"
+                                }
+                            ],
+                            "name": "setValue",
+                            "outputs": [],
+                            "payable": false,
+                            "stateMutability": "nonpayable",
+                            "type": "function"
+                        },
+                        {
+                            "anonymous": false,
+                            "inputs": [
+                                {
+                                    "indexed": false,
+                                    "name": "entry_index",
+                                    "type": "uint256"
+                                },
+                                {
+                                    "indexed": false,
+                                    "name": "storage_hash",
+                                    "type": "string"
+                                },
+                                {
+                                    "indexed": false,
+                                    "name": "transaction_type",
+                                    "type": "string"
+                                }
+                            ],
+                            "name": "entryAdded",
+                            "type": "event"
+                        }
+                    ];
+        //2- connect to smart contract
+        const connectContract = async () => {
+            const ABI = BloodOathABI;
+            const Address = "0x590cE3c3FB977e301F05CA1Be3edA943cf261BdB";
+            window.web3 = await new Web3(window.ethereum);
+            window.contract = await new window.web3.eth.Contract( ABI, Address); 
+            console.log("Contract Connected!")
+        }
+        const connectWallet = async () => {
+            if(window.ethereum !== "undefined") {
+                const accounts = await ethereum.request({method: "eth_requestAccounts"});
+                account = accounts[0];
+                console.log(account)
+            }
+            else{
+                alert("No Dapp")
+            }
+            connectContract();
+        }
+        //3-read data from smart contract
+        const sendTransaction = async () => {
+            // console.log(data); 
+            window.contract.methods.setValue("Customhash1", "donation").send({from : account}).then(console.log)           
+        }
+        
+        async function viewAllEntries(){
+            // Get number of entries then run a for loop through it
+            const data = await window.contract.methods.entry_count().call();
+            console.log(`Total Entries : ${data}`)
+            for (let i = 1; i <= data; i++) {
+                const entry_info = await window.contract.methods.entries(i).call();
+                console.log(`Entry Info for #${i}: ${entry_info.entry_index}`)
+                // console.log(entry_info)
+            }
+        }
+        document.getElementById('connect-wallet').addEventListener('click', connectWallet)
+        document.getElementById('tran-trigger').addEventListener('click', sendTransaction)
+        document.getElementById('view-all-tran-trigger').addEventListener('click', viewAllEntries)
+        
+    </script>
+</body>
+</html>

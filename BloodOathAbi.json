@@ -1,0 +1,123 @@
+[
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+            {
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_filehash",
+                "type": "string"
+            },
+            {
+                "name": "_transactiontype",
+                "type": "string"
+            },
+            {
+                "name": "_recvp",
+                "type": "string"
+            },
+            {
+                "name": "_sendp",
+                "type": "string"
+            }
+        ],
+        "name": "setValue",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "entry_count",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "entries",
+        "outputs": [
+            {
+                "name": "entry_index",
+                "type": "uint256"
+            },
+            {
+                "name": "storage_hash",
+                "type": "string"
+            },
+            {
+                "name": "transaction_type",
+                "type": "string"
+            },
+            {
+                "name": "recv_party",
+                "type": "string"
+            },
+            {
+                "name": "send_party",
+                "type": "string"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "entry_index",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "storage_hash",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "name": "transaction_type",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "name": "recv_party",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "name": "send_party",
+                "type": "string"
+            }
+        ],
+        "name": "entryAdded",
+        "type": "event"
+    }
+]

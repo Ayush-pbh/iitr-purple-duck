@@ -1,0 +1,18 @@
+{
+    "accounts" : [
+        {
+            "address": "0xC769fA9ce4Ca9bab49D92DA6A98928451163006b",
+            "privateKey": "0xac52dd20d1d42a4889922f8867e6515c58c5c0a714d41251a438577cbe69eed2"
+        },
+        
+        {
+            "address": "0xf807913cCdDEE0766C27d12F619C74c4c4fCD0B2",
+            "privateKey": "0x31b699314d0ba5c6de7e8337d7af932553fe559269aace65feb7b5c453bcd8fd"
+        },
+        {
+            "address": "0xf807913cCdDEE0766C27d12F619C74c4c4fCD0B2",
+            "privateKey": "0x52e3b042d6cca6fbf892335af12d8a3424278f69cd69a2ad299ecf851909a1aa"
+        }
+          
+    ]
+}       

@@ -1,0 +1,52 @@
+body {
+    font-family: 'Oxygen' !important;
+}
+
+
+.navbar {
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: none;
+}
+
+.sidenav {
+    background-color: rgb(234, 234, 234) !important;
+    border-radius: 0px,0px,20px,20px ;
+    height: 100vh !important;
+    width: 20% !important;
+}
+
+#btn-nbt {
+    background-color: rgba(223, 223, 223, 0.848) !important;
+    width: 90% !important;
+    border-radius: 8px;
+    margin: 10px;
+    border: 0;
+    box-shadow: none;
+    
+
+}
+#btn-nbt:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
+}
+
+#btn-nbt:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
+}
+
+.logo-container {
+    padding: 10px !important;
+    font-family: 'jost';
+    border: none !important;
+}
+
+.fa-droplet {
+    font-size: 3rem;
+    color:  rgba(254, 63, 63, 0.848) !important;
+    animation: gradient 5s ease infinite;
+  }
+  
+  .collapsible {
+    border: 0 !important;
+  }

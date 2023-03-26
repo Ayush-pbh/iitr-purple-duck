@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="dashboard-bank-styles.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://kit.fontawesome.com/714154d971.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost&family=Oxygen&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="description" content="" />
+    <title>Transactions</title>
+    <link
+      href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jqvmap.css?v=162757563705857184351528499283"
+      rel="stylesheet"
+    />
+    <link
+      href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/flag-icon.min.css?v=107574258948483483761528499307"
+      rel="stylesheet"
+    />
+    <!-- Fullcalendar-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css"
+      rel="stylesheet"
+    />
+    <!-- Materialize-->
+    <link
+      href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/admin-materialize.min.css?v=88505356707424191531528497992"
+      rel="stylesheet"
+    />
+    <!-- Material Icons-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    
+  </head>
+  <body class="has-fixed-sidenav">
+    <header>
+      <div class="navbar-fixed">
+        <nav class="navbar white">
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo grey-text text-darken-4"
+              >Transactions</a
+            >
+            <ul id="nav-mobile" class="right">
+              <li class="hide-on-med-and-down">
+                <a href="/products/admin">Balance</a>
+              </li>
+              <li class="hide-on-med-and-down">
+                <a
+                  href="#!"
+                  data-target="dropdown1"
+                  class="dropdown-trigger waves-effect"
+                  ><i class="material-icons">notifications</i></a
+                >
+              </li>
+              <li>
+                <a
+                  href="#!"
+                  data-target="chat-dropdown"
+                  class="dropdown-trigger waves-effect"
+                  ><i class="material-icons">settings</i></a
+                >
+              </li>
+            </ul>
+            <a href="#!" data-target="sidenav-left" class="sidenav-trigger left"
+              ><i class="material-icons black-text">menu</i></a
+            >
+          </div>
+        </nav>
+      </div>
+      <ul id="sidenav-left" class="sidenav sidenav-fixed">
+        <li><li><a href="/pages/admin-dashboard" class="logo-container"><i class="fa-solid fa-droplet"></i> Purple-Duck</a>
+            </li>
+        </li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li id="btn-nbt" class="bold waves-effect">
+              <a  href="dashboard-bank-index.html">Home</a>
+            </li>
+            <li id="btn-nbt" class="bold waves-effect">
+              <a  href="Records.html">Records</a>
+            </li>
+            <li  id="btn-nbt" class="bold waves-effect"><a>New Donations</a></li>
+            <li id="btn-nbt" class="bold waves-effect"><a>New Receptions</a></li>
+            <li id="btn-nbt" class="bold waves-effect"><a>Stats</a></li>
+            <li id="btn-nbt" class="bold waves-effect"><a href="issues.html">Issues</a></li>
+            <li id="btn-nbt" class="bold waves-effect">
+              <a>Account</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+                    <a href="/pages/admin-log-in" class="waves-effect"
+                      >Log In<i class="material-icons">person</i></a
+                    >
+                  </li>
+                  <li>
+                    <a href="/pages/admin-settings" class="waves-effect"
+                      >Settings<i class="material-icons">settings</i></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div id="dropdown1" class="dropdown-content notifications">
+        <div class="notifications-title">notifications</div>
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Joe Smith made a purchase</span>
+            <p>Content</p>
+          </div>
+          <div class="card-action">
+            <a href="#!">view</a><a href="#!">dismiss</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Daily Traffic Update</span>
+            <p>Content</p>
+          </div>
+          <div class="card-action">
+            <a href="#!">view</a><a href="#!">dismiss</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">New User Joined</span>
+            <p>Content</p>
+          </div>
+          <div class="card-action">
+            <a href="#!">view</a><a href="#!">dismiss</a>
+          </div>
+        </div>
+      </div>
+      <div id="chat-dropdown" class="dropdown-content dropdown-tabbed">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a href="#settings">Settings</a></li>
+          <li class="tab col s3">
+            <a href="#friends" class="active">Friends</a>
+          </li>
+        </ul>
+              
+        <div id="friends" class="col s12">
+          <ul class="collection flush">
+            <li class="collection-item avatar">
+              <div class="badged-circle online">
+                <img
+                  src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait1.jpg?v=12187984239991290791495085043"
+                  alt="avatar"
+                  class="circle"
+                />
+              </div>
+              <span class="title">Jane Doe</span>
+              <p class="truncate">Lo-fi you probably haven't heard of them</p>
+            </li>
+            <li class="collection-item avatar">
+              <div class="badged-circle">
+                <img
+                  src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait2.jpg?v=153429080364159231951495085055"
+                  alt="avatar"
+                  class="circle"
+                />
+              </div>
+              <span class="title">John Chang</span>
+              <p class="truncate">
+                etsy leggings raclette kickstarter four dollar toast
+              </p>
+            </li>
+            <li class="collection-item avatar">
+              <div class="badged-circle">
+                <img
+                  src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/portrait3.jpg?v=46796133735944755861495085064"
+                  alt="avatar"
+                  class="circle"
+                />
+              </div>
+              <span class="title">Lisa Simpson</span>
+              <p class="truncate">
+                Raw denim fingerstache food truck chia health goth synth
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- <button onclick="connectWallet">Load</button> -->
+    <input type="button" value="LOAD DATA" onclick="connectWallet()">
+    <main style="padding: 30px">
+      <div class="col s12">
+        <div class="card">
+          <ul class="collection all-transactions">
+            <!-- <li class="collection-item">Alvin</li> -->
+          </ul>
+        </div>
+      </div>
+    </main>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+
+    <script>
+      
+      let account;
+        
+BloodOathABI = [
+                    {
+                        "constant": true,
+                        "inputs": [],
+                        "name": "name",
+                        "outputs": [
+                            {
+                                "name": "",
+                                "type": "string"
+                            }
+                        ],
+                        "payable": false,
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "constant": false,
+                        "inputs": [
+                            {
+                                "name": "_filehash",
+                                "type": "string"
+                            },
+                            {
+                                "name": "_transactiontype",
+                                "type": "string"
+                            },
+                            {
+                                "name": "_recvp",
+                                "type": "string"
+                            },
+                            {
+                                "name": "_sendp",
+                                "type": "string"
+                            }
+                        ],
+                        "name": "setValue",
+                        "outputs": [],
+                        "payable": false,
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "constant": true,
+                        "inputs": [],
+                        "name": "entry_count",
+                        "outputs": [
+                            {
+                                "name": "",
+                                "type": "uint256"
+                            }
+                        ],
+                        "payable": false,
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "constant": true,
+                        "inputs": [
+                            {
+                                "name": "",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "entries",
+                        "outputs": [
+                            {
+                                "name": "entry_index",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "storage_hash",
+                                "type": "string"
+                            },
+                            {
+                                "name": "transaction_type",
+                                "type": "string"
+                            },
+                            {
+                                "name": "recv_party",
+                                "type": "string"
+                            },
+                            {
+                                "name": "send_party",
+                                "type": "string"
+                            }
+                        ],
+                        "payable": false,
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "anonymous": false,
+                        "inputs": [
+                            {
+                                "indexed": false,
+                                "name": "entry_index",
+                                "type": "uint256"
+                            },
+                            {
+                                "indexed": false,
+                                "name": "storage_hash",
+                                "type": "string"
+                            },
+                            {
+                                "indexed": false,
+                                "name": "transaction_type",
+                                "type": "string"
+                            },
+                            {
+                                "indexed": false,
+                                "name": "recv_party",
+                                "type": "string"
+                            },
+                            {
+                                "indexed": false,
+                                "name": "send_party",
+                                "type": "string"
+                            }
+                        ],
+                        "name": "entryAdded",
+                        "type": "event"
+                    }
+                ];
+//2- connect to smart contract
+const connectContract = async () => {
+    const ABI = BloodOathABI;
+    const Address = "0xD73D45D2f3b36cE9DF7aDE0711481B63A95dEc03";
+    window.web3 = await new Web3(window.ethereum);
+    window.contract = await new window.web3.eth.Contract( ABI, Address); 
+    console.log("Contract Connected!")
+    viewAllEntries();
+}
+const connectWallet = async () => {
+    if(window.ethereum !== "undefined") {
+        const accounts = await ethereum.request({method: "eth_requestAccounts"});
+        account = accounts[0];
+        console.log(account)
+        // document.getElementsByClassName('wallet-conected')[0].classList.add('visible')
+    }
+    else{
+        alert("No Dapp")
+    }
+    connectContract();
+}
+async function viewAllEntries(){
+    // Get number of entries then run a for loop through it
+    const data = await window.contract.methods.entry_count().call();
+    console.log(`Total Entries : ${data}`)
+    let hh = "";
+    for (let i = 1; i <= data; i++) {
+        const entry_info = await window.contract.methods.entries(i).call();
+        console.log(`Entry Info for #${i}: ${entry_info.entry_index}`)
+        hh+=`<li class="collection-item"> STORAGE HASH IPFS : ${entry_info.storage_hash} <br> RECV : ${entry_info.recv_party}<----- SEND ${entry_info.recv_party}</li>`
+    }
+    document.getElementsByClassName('all-transactions')[0].innerHTML = hh;
+}
+    </script>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+
+    <!-- External libraries -->
+
+    <!-- jqvmap -->
+    <script
+      type="text/javascript"
+      src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.min.js?v=163123838929084484541528498367"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.world.js?v=72513650592694871481528498398"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/jquery.vmap.sampledata.js?v=87023629870755566851528498384"
+    ></script>
+
+    <!-- ChartJS -->
+    <script
+      type="text/javascript"
+      src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.js?v=28848919051585277061528498087"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/Chart.Financial.js?v=34644991646752552951528498109"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"
+    ></script>
+    <script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/imagesloaded.pkgd.min.js?v=58819771796763510541528498326"></script>
+    <script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/masonry.pkgd.min.js?v=180312904682597569011528498229"></script>
+
+    <!-- Initialization script -->
+    <script src="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/dashboard.min.js?v=4816808830627109061528498722"></script>
+  </body>
+</html>

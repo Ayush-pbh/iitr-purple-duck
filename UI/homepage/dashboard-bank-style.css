@@ -1,0 +1,157 @@
+Reset all margins and paddings
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset all font styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  font-family: inherit;
+  line-height: 1;
+  color: inherit;
+}
+
+/* Reset all list styles */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Reset all link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset all form element styles */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  color: inherit;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-family: 'Oxygen';
+}
+
+div {
+    margin: 0;
+    pad: 0;
+}
+  
+
+
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidebar {
+    
+    width: 30%;
+    height: 90vh;
+    border-radius: 10px;
+    border: 0;
+    padding: 0;
+    margin: 20px;
+  }
+  
+  .main-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column; /* adjust the width as needed */
+  }
+
+  .sidebar {
+    background-color: #f4f4f48f;
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 0 0 10px 2px rgba(160, 160, 160, 0.14);
+  }
+  
+
+  .transactions {
+background-color: rgba(227, 227, 227, 0.703);
+width: 99%;
+height: 100px;
+padding: 20px;
+margin-bottom: 10px;
+border-radius: 10px;
+
+  }
+
+
+  .notifications {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(121, 121, 121);
+    width: 99%;
+    height: auto;
+    padding: 2px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  .title-1 {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 10px;
+  }
+
+  .fa-droplet {
+    font-size: 3rem;
+  }
+
+  .topic {
+    
+    font-size: 2rem;
+    padding: 10px;
+    align-items: center;
+    margin: 10px;
+  }
+
+  h3{
+    margin: 0;
+  }
+
+  .notify {
+    background-color: aliceblue;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 2px;
+  }
