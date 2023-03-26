@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const {create} = require('ipfs-http-client');
 const app = express()
-const port = 3000
+const port =  process.env.port || 7823
 const fs = require("fs");
 
 
@@ -69,7 +69,7 @@ async function savetoIPFS(mystr){
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.sendFile(`${__dirname}/UI/homepage/dashboard-bank-index.html`);
 })
 
 app.get('/login', (req, res) => {
